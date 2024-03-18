@@ -1,7 +1,7 @@
 import { Controller, Get, Put, Query } from '@nestjs/common';
 import { ViewAndUpdateOrderStatusService } from '../../Services/view-and-update-order-status/view-and-update-order-status.service';
 import { ApiTags } from '@nestjs/swagger';
-@ApiTags('Check And Update Order Status')
+@ApiTags('Track And Update Order Status')
 @Controller('view-and-update-order-status')
 export class ViewAndUpdateOrderStatusController {
   constructor(private checkOrderStatus: ViewAndUpdateOrderStatusService) {}
