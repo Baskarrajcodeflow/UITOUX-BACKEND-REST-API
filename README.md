@@ -58,3 +58,19 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+Commands For Database(MYSQL):
+```
+Create Database:
+Database Name - uitouxDB (Can Chnage it according to the Organization needs)
+Tables Used in Database:
+1.user_registration_table
+2.Vehicle_Table
+3.Vehicle_Part_Table
+4.PartType
+5.Orders_Table
+6.OrderStatus
+7.blog_posts
+8.Cart
+9.Products
+10.Wishlist
+```
