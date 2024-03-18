@@ -74,3 +74,129 @@ Tables Used in Database:
 9.Products
 10.Wishlist
 ```
+
+Commands For Table(MYSQL):
+1.user_registration_table
+```
+create table user_registration_table 
+(
+id int primary key auto_increment,
+user_name varchar(50) not null,
+user_email_id varchar(50) not null,
+user_phone_number int not null,
+user_password varchar(15) not null
+);
+```
+2.Vehicle_Table
+```
+CREATE TABLE Vehicle_Table (
+vehicle_id INT PRIMARY KEY AUTO_INCREMENT,
+make VARCHAR(255),
+model VARCHAR(255),
+year INT,
+color VARCHAR(50)
+);
+```
+3.Vehicle_Part_Table
+```
+CREATE TABLE Vehicle_Part_Table (
+part_number INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(255),
+description TEXT,
+vehicle_id INT,
+FOREIGN KEY (vehicle_id) REFERENCES Vehicle_Table(vehicle_id)
+);
+```
+4.PartType
+```
+CREATE TABLE PartType (
+part_type_id INT PRIMARY KEY AUTO_INCREMENT,
+part_number INT,
+type_name VARCHAR(255),
+price DECIMAL(10, 2),
+FOREIGN KEY (part_number) REFERENCES Vehicle_Part_Table(part_number)
+);
+```
+5.Vehicle_Part_Table
+```
+CREATE TABLE Vehicle_Part_Table (
+part_number INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(255),
+description TEXT,
+vehicle_id INT,
+FOREIGN KEY (vehicle_id) REFERENCES Vehicle_Table(vehicle_id)
+);
+```
+6.PartType
+```
+CREATE TABLE PartType (
+part_type_id INT PRIMARY KEY AUTO_INCREMENT,
+part_number INT,
+type_name VARCHAR(255),
+price DECIMAL(10, 2),
+FOREIGN KEY (part_number) REFERENCES Vehicle_Part_Table(part_number)
+);
+```
+7.Orders_Table
+```
+CREATE TABLE `Orders_Table` (
+`order_id` INT AUTO_INCREMENT PRIMARY KEY,
+`customer_id` INT NOT NULL,
+`order_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+`total_price` DECIMAL(10, 2) NOT NULL,
+`vehicle_id` INT NOT NULL,
+`make` VARCHAR(255) NOT NULL,
+`model` VARCHAR(255) NOT NULL,
+`part_name` VARCHAR(255) NOT NULL,
+`quantity` INT NOT NULL
+);
+```
+8.OrderStatus
+```
+CREATE TABLE OrderStatus (
+status_id INT AUTO_INCREMENT PRIMARY KEY,
+status_name VARCHAR(255) NOT NULL,
+order_id INT,
+FOREIGN KEY (order_id) REFERENCES Orders_Table(order_id)
+);
+```
+9.blog_posts
+```
+CREATE TABLE blog_posts (
+post_id INT AUTO_INCREMENT PRIMARY KEY,
+title VARCHAR(255) NOT NULL,
+content JSON NOT NULL,
+created_at datetime,
+updated_at datetime
+);
+```
+10.Cart
+```
+CREATE TABLE Cart (
+cart_id INT AUTO_INCREMENT PRIMARY KEY,
+customer_id INT,
+product_id INT,
+quantity INT DEFAULT 1,
+total_price INT 
+);
+```
+11.Products
+```
+CREATE TABLE Products (
+product_id INT AUTO_INCREMENT PRIMARY KEY,
+Product_name VARCHAR(255) NOT NULL,
+price DECIMAL(10, 2) NOT NULL,
+description TEXT,
+image_url VARCHAR(255)
+);
+```
+12.Wishlist
+```
+CREATE TABLE Wishlist (
+wishlist_id INT AUTO_INCREMENT PRIMARY KEY,
+customer_id INT,
+product_id INT,
+added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY (product_id) REFERENCES Products(product_id)
+);
+```
