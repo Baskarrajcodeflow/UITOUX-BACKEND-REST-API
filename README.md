@@ -200,3 +200,7 @@ added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 FOREIGN KEY (product_id) REFERENCES Products(product_id)
 );
 ```
+
+![Screenshot 2024-03-19 041644](https://github.com/Baskarrajcodeflow/UITOUX-BACKEND-REST-API/assets/149696470/2d829d40-5ffb-4a27-a910-5be590f41fa3)
+
+![Screenshot 2024-03-19 041709](https://github.com/Baskarrajcodeflow/UITOUX-BACKEND-REST-API/assets/149696470/97268ef8-873e-4ded-b745-170b61c448e5)
