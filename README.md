@@ -61,20 +61,3 @@ $ npm run test:cov
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-Commands For Database(MYSQL):
-```
-Create Database:
-Database Name - uitouxDB (Can Chnage it according to the Organization needs)
-Tables Used in Database:
-1.user_registration_table
-2.Vehicle_Table
-3.Vehicle_Part_Table
-4.PartType
-5.Orders_Table
-6.OrderStatus
-7.blog_posts
-8.Cart
-9.Products
-10.Wishlist
-```
