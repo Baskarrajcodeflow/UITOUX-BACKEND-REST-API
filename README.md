@@ -200,6 +200,19 @@ added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 FOREIGN KEY (product_id) REFERENCES Products(product_id)
 );
 ```
+
+### ENV File For Backend (Nest JS)
+# PORT
+PORT=3001
+
+# DATABASE CONFIGRATION VARIABLES
+## DATABASE TYPE
+DB_TYPE='mysql'
+DB_PORT=3306
+DB_HOST= 127.0.0.1
+DB_USERNAME= root
+DB_PASSWORD ='db@12345'
+
 ### Swagger TOOL For Api Testing
 ![Screenshot 2024-03-19 041644](https://github.com/Baskarrajcodeflow/UITOUX-BACKEND-REST-API/assets/149696470/2d829d40-5ffb-4a27-a910-5be590f41fa3)
 
